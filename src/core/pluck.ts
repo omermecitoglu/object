@@ -5,6 +5,6 @@
  * @param key The key of the property to be extracted from each object.
  * @returns An array of values corresponding to the specified key from each object in the collection.
  */
-export function pluck<T, K extends keyof T>(collection: T[], key: K) {
-  return collection.map(item => item[key]) as T[K][];
+export function pluck<T, K extends keyof T>(collection: T[], key: K): T[K][] {
+  return collection.map(item => item[key]);
 }

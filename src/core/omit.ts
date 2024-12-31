@@ -7,7 +7,7 @@ import { Prettify } from "../types/prettify";
  * @param keys The list of keys to omit from the source object.
  * @returns A new object containing all properties except the omitted ones, with the types preserved.
  */
-export function omit<T extends object, K extends keyof T>(object: T, ...keys: K[]) {
+export function omit<T extends object, K extends keyof T>(object: T, ...keys: K[]): Prettify<Omit<T, K>> {
   const entries = Object.entries(object).filter(([key]) => !keys.includes(key as K))
   return Object.fromEntries(entries) as Prettify<Omit<T, K>>;
 }
