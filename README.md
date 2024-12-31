@@ -1,4 +1,4 @@
-# Array
+# Object
 
 Provides some object utils
 
